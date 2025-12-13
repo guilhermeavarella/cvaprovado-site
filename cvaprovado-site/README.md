@@ -1,1 +1,0 @@
-# Currículo Aprovado - Website
