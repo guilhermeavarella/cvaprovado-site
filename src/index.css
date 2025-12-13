@@ -1,70 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Geologica:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: "Geologica", sans-serif;
+  font-size: 12px;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: #FFFFFF;
   background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  --content-primary: #3A3E4B;
+  --content-secondary: #626E70;
+  --content-inverse: #FFFFFF;
+  --content-accent: #296D5B;
+
+  --brand-primary: #02634D;
+  --brand-secondary: #00C071;
+  --brand-accent: #042223;
+
+  --background-default: #F0F4F5;
+  --background-inverse: #242424;
+  --background-light: #CDD4D4;
+  --background-dark: #535353;
+  --background-accent: #0D3B39;
+  --background-fixed-black: #000000;
+  --background-fixed-white: #FFFFFF;
 }
 
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  place-items: left;
+  min-width: 100vw;
   min-height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 2.25rem;
+  font-weight: 600; /* semibold */
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+h2 {
+  font-size: 2.25rem;
+  font-weight: 500; /* medium */
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 500; /* medium */
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 400; /* regular */
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 600; /* semibold */
+}
+
+p {
+  font-family: "General Sans", sans-serif;
+}
+
+/* ExtraLight */
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/general-sans/GeneralSans-Extralight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/general-sans/GeneralSans-ExtralightItalic.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+/* Light */
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/general-sans/GeneralSans-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/general-sans/GeneralSans-LightItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Regular */
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/general-sans/GeneralSans-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/general-sans/GeneralSans-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Medium */
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/general-sans/GeneralSans-Medium.otf") format("opentype");
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: light) {
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/general-sans/GeneralSans-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Semibold */
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/general-sans/GeneralSans-Semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/general-sans/GeneralSans-SemiboldItalic.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Bold */
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/general-sans/GeneralSans-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/general-sans/GeneralSans-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@media (min-width: 576px) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    font-size: 14px;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+}
+
+@media (min-width: 768px) {
+  :root {
+    font-size: 16px;
   }
 }
