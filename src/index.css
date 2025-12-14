@@ -3,6 +3,7 @@
 :root {
   font-family: "Geologica", sans-serif;
   font-size: 12px;
+  line-height: 1.2;
 
   color-scheme: light dark;
   color: #3A3E4B;
@@ -42,6 +43,7 @@ body {
 h1 {
   font-size: 2.25rem;
   font-weight: 600; /* semibold */
+  line-height: 1.2;
 }
 
 h2 {
