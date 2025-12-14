@@ -8,7 +8,7 @@ const NAVBAR_VARIANTS = {
 const LOGO_VARIANTS = {
     text: {
         logo: "/logos/text-white.svg",
-        size: "h-27",
+        size: "h-16",
     },
     icon: {
         logo: "/logos/icon.svg",
