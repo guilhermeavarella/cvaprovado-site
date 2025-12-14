@@ -45,7 +45,7 @@ export default function NavBar() {
             ${NAVBAR_VARIANTS[variant]}
         `}
         >
-        <img src={LOGO_VARIANTS[logo].logo} alt="Currículo Vencedor" className={LOGO_VARIANTS[logo].size + " hover:cursor-pointer"} onClick={() => window.location.href = "/"} />
+        <img src={LOGO_VARIANTS[logo].logo} alt="Currículo Aprovado" className={LOGO_VARIANTS[logo].size + " hover:cursor-pointer"} onClick={() => window.location.href = "/"} />
         </section>
     );
 }
