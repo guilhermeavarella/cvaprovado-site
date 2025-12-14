@@ -40,7 +40,7 @@ export default function NavBar() {
     return (
         <section
         className={`
-            sticky top-0 w-full flex flex-col items-center justify-center py-2 px-4
+            sticky top-0 w-full flex flex-col items-center justify-center py-2 px-4 z-100
             transition-colors duration-500 ease-in-out
             ${NAVBAR_VARIANTS[variant]}
         `}

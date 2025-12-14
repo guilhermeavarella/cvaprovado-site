@@ -9,7 +9,7 @@ function App() {
       <NavBar />
 
       {/* Content */}
-      <section className="w-full min-h-screen flex flex-col items-center justify-start pt-24">
+      <section className="w-full min-h-screen flex flex-col items-center justify-start">
         <Outlet />
       </section>
 
