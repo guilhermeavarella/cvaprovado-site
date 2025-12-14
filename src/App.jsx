@@ -1,8 +1,13 @@
 import { Outlet } from "react-router-dom"
+import NavBar from "./components/NavBar.jsx"
 
 function App() {
+
   return (
     <main className="min-w-screen min-h-screen flex flex-col items-center justify-start">
+      {/* NavBar */}
+      <NavBar />
+
       {/* Content */}
       <section className="w-full min-h-screen flex flex-col items-center justify-start pt-24">
         <Outlet />
