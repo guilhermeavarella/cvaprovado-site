@@ -3,7 +3,7 @@
   --slide-height: 36rem;
   --slide-spacing: 2rem;
   --slide-size: calc(100% - var(--slide-spacing));
-  @media (min-width: 768px) {
+  @media (min-width: 928px) {
     --slide-height: 28rem;
     --slide-size: 40%;
   }

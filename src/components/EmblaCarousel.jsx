@@ -11,7 +11,7 @@ import '../assets/styles/embla.css'
 const EmblaCarousel = (props) => {
   const { slides, options } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
-  const isLargeScreen = window.innerWidth >= 768
+  const isLargeScreen = window.innerWidth >= 928
 
   const onNavButtonClick = useCallback((emblaApi) => {
     const autoplay = emblaApi?.plugins()?.autoplay
