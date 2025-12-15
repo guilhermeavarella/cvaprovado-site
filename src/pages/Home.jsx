@@ -12,7 +12,7 @@ export default function Home() {
       {/* Background Image and Hero*/}
       <div className="absolute top-0 w-full h-[54rem] flex flex-col items-center overflow-visible">
         <div className="w-full h-[54rem] bg-[var(--background-inverse)]"/>
-        <img src={heroImage} className="w-screen mt-[-1.25rem] mr-[-1rem] lg:mt-[-5.5rem]"/>
+        <img src={heroImage} className="w-screen mt-[-1.25rem] mr-[-1rem] lg:mt-[-5.5rem] lg:mr-0"/>
       </div>
 
       {/* Landing section */}
