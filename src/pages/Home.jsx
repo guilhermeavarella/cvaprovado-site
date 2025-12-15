@@ -11,7 +11,7 @@ export default function Home() {
     <div className="w-screen bg-[var(--background-default)] flex flex-col items-center justify-start">
       {/* Background Image and Hero*/}
       <div className="absolute top-0 w-full h-[54rem] flex flex-col items-center overflow-visible">
-        <img className="w-full h-[54rem] bg-[var(--background-inverse)]"/>
+        <div className="w-full h-[54rem] bg-[var(--background-inverse)]"/>
         <img src={heroImage} className="w-screen mt-[-1.25rem] lg:mt-[-5.5rem]"/>
       </div>
 
