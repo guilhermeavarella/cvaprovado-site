@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import Button from "../components/CTAButton.jsx";
 import ServiceCard from "../components/ServiceCard.jsx";
 import EmblaCarousel from "../components/EmblaCarousel.jsx";
@@ -71,7 +72,7 @@ export default function Home() {
             <h2>
               Desbloqueie vagas de emprego nas maiores empresas
             </h2>
-            <p className="font-medium">
+            <p className="text-justify font-medium lg:text-start">
               Este é o sistema validado que vai te tirar do anonimato, transformando seu currículo e LinkedIn em ferramentas de atração de recrutadores e te preparando para conquistar a vaga que você sempre quis. É a metodologia de alto impacto que eu mesmo uso e aplico com sucesso em meus clientes.
             </p>
           </div>
@@ -168,7 +169,11 @@ export default function Home() {
       
       {/* Final section */}
       <section className="w-full flex flex-col items-center justify-start px-4 py-12 lg:py-16 lg:max-w-300">
-        <div className="w-full flex flex-col items-center justify-center lg:flex-row gap-8 lg:px-16 lg:gap-32">
+        <motion.div 
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.25 }}
+        className="w-full flex flex-col items-center justify-center lg:flex-row gap-8 lg:px-16 lg:gap-32">
           <div className="w-full flex flex-col items-center justify-center gap-2 lg:mx-12">
             <img src="/images/Joseph.jpg" className="w-80 h-80 rounded-full"/>
             <div className="flex flex-row items-center">
@@ -189,7 +194,7 @@ export default function Home() {
             <div className="text-center text-2xl font-[Geologica] font-semibold text-[var(--brand-primary)]">Seja a próxima história de sucesso!</div>
             <Button label="Quero garantir minha vaga" variant="default"/>
           </div>
-        </div>
+        </motion.div>
       </section>
     </div>
   )
