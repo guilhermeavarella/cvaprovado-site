@@ -13,7 +13,7 @@ export default function Home() {
       {/* Background Image and Hero*/}
       <div className="absolute top-0 w-screen h-[54rem] flex flex-col items-center overflow-hidden">
         <div className="w-full h-[54rem] bg-[var(--background-inverse)]"/>
-        <img src={heroImage} className="w-screen mt-[-1.25rem] mr-[-1rem] lg:mt-[-5.5rem] lg:mr-0"/>
+        <img src={heroImage} className="w-screen mt-[-1.25rem] mr-[-1rem] lg:mt-[-6.25rem] lg:mr-0"/>
       </div>
 
       {/* Landing section */}
@@ -23,13 +23,19 @@ export default function Home() {
             <h1 className="w-full text-center">
               SEU CURRÍCULO PODE ESTAR TE ELIMINANDO SEM VOCÊ SABER
             </h1>
-            <p className="w-full text-center mt-4 lg:text-lg lg:px-54">
+            <p className="w-full text-center mt-4 lg:text-lg lg:px-52">
               Transformo sua busca por emprego em sucesso: reformulação de currículo, Gupy e perfil no LinkedIn
             </p>
           </div>
           <Button label="Saiba mais" variant="default"/>
           <div className="w-full flex flex-col items-center justify-center gap-8">
-            <div className="w-full h-[calc((100vw-2rem)*9/16)] bg-black lg:w-160 lg:h-90"/> {/* Placeholder for video */}
+
+            {/* Youtube embed */}
+            <iframe 
+            className="w-full h-[calc((100vw-2rem)*9/16)] bg-black lg:w-160 lg:h-90"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            />
+
             {isLargeScreen ? (
               <p className="text-sm text-center text-[var(--content-primary)]">
                 Vocẽ pode ser a próxima história de sucesso e conquistar a vaga dos seus sonhos
