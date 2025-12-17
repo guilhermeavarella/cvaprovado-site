@@ -38,6 +38,8 @@ body {
   place-items: left;
   min-width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
+  overscroll-behavior: none;
 }
 
 h1 {
