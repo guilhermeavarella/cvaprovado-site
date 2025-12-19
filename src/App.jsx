@@ -15,7 +15,7 @@ function App() {
 
       {/* Footer */}
       <section className="w-full flex flex-col items-center justify-center bg-[var(--background-fixed-black)] py-24 px-4 gap-4 text-[var(--content-inverse)]">
-        <p className="text-sm text-center mx-20">Acompanhe nas redes sociais ou entre em contato:</p>
+        <p className="text-sm text-center mx-26">Acompanhe nas redes sociais ou entre em contato:</p>
 
         <div className="flex items-center justify-center p-4 gap-5">
           <a href="https://www.instagram.com/curriculo.aprovado/" target="_blank" rel="noreferrer">
