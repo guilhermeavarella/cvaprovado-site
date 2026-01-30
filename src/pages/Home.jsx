@@ -33,7 +33,7 @@ export default function Home() {
             {/* Youtube embed */}
             <iframe 
             className="w-full h-[calc((100vw-2rem)*9/16)] bg-black lg:w-160 lg:h-90"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            src="https://www.youtube.com/embed/SywifiPJEWc"
             />
 
             {isLargeScreen ? (

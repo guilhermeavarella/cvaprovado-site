@@ -27,10 +27,10 @@ function App() {
           <a href="https://wa.me/5511963991859/" target="_blank" rel="noreferrer">
             <img src="/icons/socials/whatsapp.svg" alt="Whatsapp" className="w-16 h-16 hover:opacity-70 transition-opacity"/>
           </a>
-          <a href="" target="_blank" rel="noreferrer">
+          <a href="https://www.youtube.com/@Joseph-CA-APROVADO/" target="_blank" rel="noreferrer">
             <img src="/icons/socials/youtube.svg" alt="Youtube" className="w-16 h-16 hover:opacity-70 transition-opacity"/>
           </a>
-          <a href="" target="_blank" rel="noreferrer">
+          <a href="https://www.tiktok.com/@curriculo_aprovado/" target="_blank" rel="noreferrer">
             <img src="/icons/socials/tiktok.svg" alt="TikTok" className="w-16 h-16 hover:opacity-70 transition-opacity"/>
           </a>
         </div>
