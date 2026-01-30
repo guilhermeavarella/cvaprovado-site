@@ -13,7 +13,7 @@ export default function Home() {
       {/* Background Image and Hero*/}
       <div className="absolute top-0 w-screen h-[54rem] flex flex-col items-center overflow-hidden">
         <div className="w-full h-[54rem] bg-[var(--background-inverse)]"/>
-        <img src={heroImage} className="w-dvw mt-[-1.25rem] lg:mt-[-5%] lg:mr-0"/>
+        <img src={heroImage} className="w-dvw mt-[-1.25rem] mr-[-1rem] lg:mt-[-5%] lg:mr-0"/>
       </div>
 
       {/* Landing section */}
