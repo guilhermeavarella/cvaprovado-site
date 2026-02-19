@@ -7,10 +7,11 @@ import {
 import Autoplay from 'embla-carousel-autoplay'
 import useEmblaCarousel from 'embla-carousel-react'
 import '../assets/styles/embla.css'
+import { motion } from 'motion/react'
 
 const EmblaCarousel = (props) => {
   const { slides, options } = props
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay({ delay: 3000 })])
   const isLargeScreen = window.innerWidth >= 928
 
   const onNavButtonClick = useCallback((emblaApi) => {
@@ -25,6 +26,20 @@ const EmblaCarousel = (props) => {
     resetOrStop()
   }, [])
 
+  const onHover = useCallback((emblaApi) => {
+    const autoplay = emblaApi?.plugins()?.autoplay
+    if (!autoplay) return
+
+    autoplay.stop()
+  }, [])
+
+  const onLeave = useCallback((emblaApi) => {
+    const autoplay = emblaApi?.plugins()?.autoplay
+    if (!autoplay) return
+
+    autoplay.play()
+  }, [])
+
   const {
     prevBtnDisabled,
     nextBtnDisabled,
@@ -34,12 +49,19 @@ const EmblaCarousel = (props) => {
 
   return (
     <section className="embla w-full">
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
+      <div 
+      className="embla__viewport" 
+      style={{ overflow: 'visible',}} ref={emblaRef}  onMouseEnter={() => onHover(emblaApi)} onMouseLeave={() => onLeave(emblaApi)}>
+        <div className="embla__container" style={{ overflow: 'visible' }}>
           {slides.map((content, index) => (
-            <div className="embla__slide" key={index}>
+            <motion.div 
+            className="embla__slide" 
+            key={index}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            >
               <div className="embla__slide__number bg-[var(--background-accent)] shadow-sm">{content}</div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
