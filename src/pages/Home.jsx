@@ -147,7 +147,7 @@ export default function Home() {
       
       {/* Reports section */}
       <section className="w-full max-w-screen flex flex-col items-center justify-start py-12 lg:py-16">
-        <div className="text-3xl lg:text-4xl font-[Geologica] font-semibold mb-12">Histórias de sucesso</div>
+        <div className="text-3xl lg:text-4xl font-[Geologica] font-semibold mb-8">Histórias de sucesso</div>
 
         {/* Reports carousel */}
         <EmblaCarousel slides={[
