@@ -59,8 +59,9 @@ export default function Home() {
         {/* Identification card */}
         <motion.div 
         className="w-full flex flex-col items-center bg-[var(--background-accent)] rounded-2xl p-8 lg:p-16 gap-12 lg:justify-between lg:flex-row"
-        // PARALLAX
-        
+        initial={{ scale: 1 }}
+        whileHover={{ scale: 1.05 }}
+        transition={{ duration: 0.3 }}
         >
           <div className="flex flex-col gap-6">
             <h2 className="text-[var(--content-inverse)]">
@@ -189,7 +190,7 @@ export default function Home() {
         <motion.div 
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.25 }}
+        transition={{ duration: 0.75, delay: 0.25 }}
         className="w-full flex flex-col items-center justify-center lg:flex-row gap-8 lg:px-16 lg:gap-32">
           <div className="w-full flex flex-col items-center justify-center gap-2 lg:mx-12">
             <img src="/images/Joseph.jpg" className="w-80 h-80 rounded-full"/>
@@ -208,7 +209,17 @@ export default function Home() {
                 Durante esse tempo, eu entendi como funcionam os algoritmos que filtram currículos (ATS), como os recrutadores pensam e por que a maioria dos candidatos sequer é vista.
               </p>
             </div>
-            <div className="text-center text-2xl font-[Geologica] font-semibold text-[var(--brand-primary)]">Seja a próxima história de sucesso!</div>
+            <motion.div 
+            className="text-center text-2xl font-[Geologica] font-semibold text-[var(--brand-primary)]"
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            transition={{
+                duration: 0.15,
+                scale: { type: "easeIn", delay: 0.25 },
+            }}
+            >
+              Seja a próxima história de sucesso!
+            </motion.div>
             <Button label="Quero garantir minha vaga" variant="default"/>
           </div>
         </motion.div>
