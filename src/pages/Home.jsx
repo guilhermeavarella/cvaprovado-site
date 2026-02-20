@@ -84,15 +84,37 @@ export default function Home() {
       <section className="w-full flex flex-col items-center justify-start px-4 py-12 lg:py-16 lg:max-w-300">
         <div className="w-full flex flex-col justify-center gap-16 lg:gap-16">
           <div className="w-full flex flex-col gap-6 lg:max-w-200">
-            <h4>
+            <motion.h4
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            transition={{
+                duration: 0.05,
+                scale: { type: "easeIn", delay: 0.25 },
+            }}
+            >
               GARANTO SEU POSICIONAMENTO NO MERCADO
-            </h4>
-            <h2>
+            </motion.h4>
+            <motion.h2
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            transition={{
+                duration: 0.15,
+                scale: { type: "easeIn", delay: 0.35 },
+            }}
+            >
               Desbloqueie vagas de emprego nas maiores empresas
-            </h2>
-            <p className="text-justify font-medium lg:text-start">
+            </motion.h2>
+            <motion.p 
+            className="text-justify font-medium lg:text-start"
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            transition={{
+                duration: 0.25,
+                scale: { type: "easeIn", delay: 0.45 },
+            }}
+            >
               Este é o sistema validado que vai te tirar do anonimato, transformando seu currículo e LinkedIn em ferramentas de atração de recrutadores e te preparando para conquistar a vaga que você sempre quis. É a metodologia de alto impacto que eu mesmo uso e aplico com sucesso em meus clientes.
-            </p>
+            </motion.p>
           </div>
 
           {isLargeScreen ? (
