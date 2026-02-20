@@ -46,20 +46,22 @@ const EmblaCarousel = (props) => {
     onPrevButtonClick,
     onNextButtonClick
   } = usePrevNextButtons(emblaApi, onNavButtonClick)
-  
 
   return (
     <section className="embla w-full">
       <div 
-      className="embla__viewport" 
-      style={{ overflow: 'visible',}} ref={emblaRef}  onMouseEnter={() => onHover(emblaApi)} onMouseLeave={() => onLeave(emblaApi)}>
-        <div className="embla__container" style={{ 'overflow-y': 'visible' }}>
+      className="embla__viewport py-4" 
+      ref={emblaRef}  
+      onMouseEnter={() => onHover(emblaApi)} 
+      onMouseLeave={() => onLeave(emblaApi)}
+      >
+        <div className="embla__container">
           {slides.map((content, index) => (
             <motion.div 
             className="embla__slide" 
             key={index}
             whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: isLargeScreen ? 0.95 : 1.05 }}
+            whileTap={{ scale: 0.95 }}
             >
               <div className="embla__slide__number bg-[var(--background-accent)] shadow-sm">{content}</div>
             </motion.div>
