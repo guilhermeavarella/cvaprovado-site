@@ -8,6 +8,14 @@ import reports from '../assets/reports.json';
 export default function Home() {
   const isLargeScreen = window.innerWidth >= 928;
 
+  const opportunities = [
+    "+400 currículos otimizados e personalizados",
+    "+280 aprovações em processos seletivos",
+    "+30 aprovações no Itaú Unibanco e entre outras instituições financeiras",
+    "Currículos com até 80% mais chance de serem selecionados",
+    "Suporte completo em inscrição, busca de vagas e simulações de entrevista"
+  ];
+
   return (
     <div className="w-screen bg-[var(--background-default)] flex flex-col items-center justify-start">
       {/* Background Image and Hero*/}
@@ -49,7 +57,11 @@ export default function Home() {
       <section className="w-full flex flex-col items-center justify-start px-4 py-12 mt-16 lg:py-16 lg:max-w-300 md:mt-0">
 
         {/* Identification card */}
-        <div className="w-full flex flex-col items-center bg-[var(--background-accent)] rounded-2xl p-8 lg:p-16 gap-12 lg:justify-between lg:flex-row">
+        <motion.div 
+        className="w-full flex flex-col items-center bg-[var(--background-accent)] rounded-2xl p-8 lg:p-16 gap-12 lg:justify-between lg:flex-row"
+        // PARALLAX
+        
+        >
           <div className="flex flex-col gap-6">
             <h2 className="text-[var(--content-inverse)]">
               Se você:
@@ -64,7 +76,7 @@ export default function Home() {
             </h5>
           </div>
           <Button label="Entenda como" variant="white"/>
-        </div>
+        </motion.div>
 
       </section>
 
@@ -84,29 +96,20 @@ export default function Home() {
           </div>
 
           {isLargeScreen ? (
-            <div className="w-full flex flex-row items-center justify-center gap-16">
+            <div className="w-full flex flex-row items-center justify-center gap-14">
               <div className="w-full flex flex-col items-center justify-center gap-8">
-                <div className="flex flex-col gap-2">
-                  <div className="flex gap-1.5">
-                    <img src="/icons/check.svg" className="w-6 h-6"/>
-                    <p className="font-medium mt-0.25">+400 currículos otimizados e personalizados</p>
-                  </div>
-                  <div className="flex gap-1.5">
-                    <img src="/icons/check.svg" className="w-6 h-6"/>
-                    <p className="font-medium mt-0.25">+280 aprovações em processos seletivos</p>
-                  </div>
-                  <div className="flex gap-1.5">
-                    <img src="/icons/check.svg" className="w-6 h-6"/>
-                    <p className="font-medium mt-0.25">+30 aprovações no Itaú Unibanco e entre outras instituições financeiras</p>
-                  </div>
-                  <div className="flex gap-1.5">
-                    <img src="/icons/check.svg" className="w-6 h-6"/>
-                    <p className="font-medium mt-0.25">Currículos com até 80% mais chance de serem selecionados</p>
-                  </div>
-                  <div className="flex gap-1.5">
-                    <img src="/icons/check.svg" className="w-6 h-6"/>
-                    <p className="font-medium mt-0.25">Suporte completo em inscrição, busca de vagas e simulações de entrevista</p>
-                  </div>
+                <div className="flex flex-col gap-1">
+                  {opportunities.map((text, index) => (
+                    <motion.div 
+                    key={index} 
+                    className="flex gap-1.5 rounded-sm py-0.5 pl-0.5 pr-1 hover:cursor-default"
+                    whileHover={{ backgroundColor: '#00C07166' }}
+                    transition={{ duration: 0.3 }}
+                    >
+                      <img src="/icons/check.svg" className="w-6 h-6" alt="check icon" />
+                      <p className="font-medium mt-0.25">{text}</p>
+                    </motion.div>
+                  ))}
                 </div>
                 <Button label="Brilhe nas entrevistas" variant="default"/>
               </div>
@@ -117,26 +120,12 @@ export default function Home() {
               <img src="/images/opportunities.svg" className="h-76 mx-32"/>
               <div className="w-full flex flex-col items-center justify-center gap-8">
                 <div className="flex flex-col gap-2">
-                  <div className="flex gap-1.5">
-                    <img src="/icons/check.svg" className="w-8 h-8"/>
-                    <p className="font-medium mt-1">+400 currículos otimizados e personalizados</p>
-                  </div>
-                  <div className="flex gap-1.5">
-                    <img src="/icons/check.svg" className="w-8 h-8"/>
-                    <p className="font-medium mt-1">+280 aprovações em processos seletivos</p>
-                  </div>
-                  <div className="flex gap-1.5">
-                    <img src="/icons/check.svg" className="w-8 h-8"/>
-                    <p className="font-medium mt-1">+30 aprovações no Itaú Unibanco e entre outras instituições financeiras</p>
-                  </div>
-                  <div className="flex gap-1.5">
-                    <img src="/icons/check.svg" className="w-8 h-8"/>
-                    <p className="font-medium mt-1">Currículos com até 80% mais chance de serem selecionados</p>
-                  </div>
-                  <div className="flex gap-1.5">
-                    <img src="/icons/check.svg" className="w-8 h-8"/>
-                    <p className="font-medium mt-1">Suporte completo em inscrição, busca de vagas e simulações de entrevista</p>
-                  </div>
+                  {opportunities.map((text, index) => (
+                    <div key={index} className="flex gap-1.5">
+                      <img src="/icons/check.svg" className="w-8 h-8"/>
+                      <p className="font-medium mt-1">{text}</p>
+                    </div>
+                  ))}
                 </div>
                 <Button label="Brilhe nas entrevistas" variant="default"/>
               </div>
