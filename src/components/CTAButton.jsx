@@ -9,7 +9,7 @@ export default function Button({ label, variant }) {
         variant === "white" ?
         <motion.button 
         whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
+        whileTap={{ scale: 0.9 }}
         className="flex flex-row items-center bg-[var(--background-fixed-white)] text-[var(--content-primary)] px-8 py-4 gap-4 rounded-xl hover:brightness-95 hover:cursor-pointer transition-opacity select-none"
         onClick={() => { window.open('https://wa.me/5511963991859'); }}
         >
@@ -19,7 +19,7 @@ export default function Button({ label, variant }) {
         :
         <motion.button
         whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
+        whileTap={{ scale: 0.9 }}
         className="flex flex-row items-center bg-[var(--brand-secondary)] text-[var(--content-inverse)] px-8 py-4 gap-4 rounded-xl hover:brightness-95 hover:cursor-pointer transition-opacity select-none"
         onClick={() => { window.open('https://wa.me/5511963991859'); }}
         >

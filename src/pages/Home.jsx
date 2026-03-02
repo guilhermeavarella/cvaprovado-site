@@ -58,13 +58,13 @@ export default function Home() {
 
         {/* Identification card */}
         <motion.div 
-        className="w-full flex flex-col items-center bg-[var(--background-accent)] rounded-2xl p-8 lg:p-16 gap-12 lg:justify-between lg:flex-row select-none"
+        className="w-full flex flex-col items-center bg-[var(--background-accent)] rounded-2xl p-8 lg:p-16 gap-12 lg:justify-between lg:flex-row"
         initial={{ scale: 1 }}
         whileHover={{ scale: 1.05 }}
         whileactive={{ scale: 1.05 }}
         transition={{ duration: 0.15 }}
         >
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 select-none">
             <h2 className="text-[var(--content-inverse)]">
               Se você:
             </h2>
