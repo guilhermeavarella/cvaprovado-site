@@ -58,7 +58,7 @@ export default function Home() {
 
         {/* Identification card */}
         <motion.div 
-        className="w-full flex flex-col items-center bg-[var(--background-accent)] rounded-2xl p-8 lg:p-16 gap-12 lg:justify-between lg:flex-row"
+        className="w-full flex flex-col items-center bg-[var(--background-accent)] rounded-2xl p-8 lg:p-16 gap-12 lg:justify-between lg:flex-row select-none"
         initial={{ scale: 1 }}
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.15 }}

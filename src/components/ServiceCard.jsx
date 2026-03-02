@@ -5,7 +5,7 @@ export default function ServiceCard({ title, description, icon }) {
 
     return (
         <motion.div 
-        className="w-full lg:w-[17.25rem] h-[18rem] lg:h-[21.5rem] flex flex-col items-center bg-[var(--background-fixed-white)] rounded-2xl shadow-sm px-4 py-8 gap-4 hover:shadow-[0_0_10px_4px] lg:hover:shadow-[0_0_10px_2px] hover:shadow-[#00775bf0] transition-shadow duration-200 ease-in-out"
+        className="w-full lg:w-[17.25rem] h-[18rem] lg:h-[21.5rem] flex flex-col items-center bg-[var(--background-fixed-white)] rounded-2xl shadow-sm px-4 py-8 gap-4 hover:shadow-[0_0_10px_4px] lg:hover:shadow-[0_0_10px_2px] hover:shadow-[#00775bf0] transition-shadow duration-200 ease-in-out select-none"
         whileHover={{ scale: isLargeScreen ? 1.15 : 1.025 }}
         whileTap={{ scale: 1.05 }}
         >
