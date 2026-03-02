@@ -40,7 +40,7 @@ export default function Home() {
 
             {/* Youtube embed */}
             <iframe 
-            className="w-full h-[calc((100vw-2rem)*9/16)] bg-black lg:w-160 lg:h-90 focus:shadow-[0_0_20px_6px] lg:hover:shadow-[0_0_20px_4px] focus:shadow-[#00775bf0] hover:shadow-[#00775bf0] transition-shadow duration-200 ease-in-out"
+            className="w-full h-[calc((100vw-2rem)*9/16)] bg-black lg:w-160 lg:h-90 active:shadow-[0_0_20px_6px] lg:hover:shadow-[0_0_20px_4px] active:shadow-[#00775bf0] hover:shadow-[#00775bf0] transition-shadow duration-200 ease-in-out"
             src="https://www.youtube.com/embed/SywifiPJEWc"
             />
 
@@ -61,7 +61,7 @@ export default function Home() {
         className="w-full flex flex-col items-center bg-[var(--background-accent)] rounded-2xl p-8 lg:p-16 gap-12 lg:justify-between lg:flex-row select-none"
         initial={{ scale: 1 }}
         whileHover={{ scale: 1.05 }}
-        whileFocus={{ scale: 1.05 }}
+        whileactive={{ scale: 1.05 }}
         transition={{ duration: 0.15 }}
         >
           <div className="flex flex-col gap-6">
@@ -202,7 +202,7 @@ export default function Home() {
         transition={{ duration: 0.75, delay: 0.25 }}
         className="w-full flex flex-col items-center justify-center lg:flex-row gap-8 lg:px-16 lg:gap-32">
           <div className="w-full flex flex-col items-center justify-center gap-2 lg:mx-12">
-            <img src="/images/Joseph.jpg" className="w-80 h-80 rounded-full focus:shadow-[0_0_20px_4px] lg:hover:shadow-[0_0_20px_2px] focus:shadow-[#00775bf0] hover:shadow-[#00775bf0] transition-shadow duration-200 ease-in-out"/>
+            <img src="/images/Joseph.jpg" className="w-80 h-80 rounded-full active:shadow-[0_0_20px_4px] lg:hover:shadow-[0_0_20px_2px] active:shadow-[#00775bf0] hover:shadow-[#00775bf0] transition-shadow duration-200 ease-in-out"/>
             <div className="flex flex-row items-center">
               <img src="/logos/full.svg" className="h-16"/>
               <div className="text-3xl font-[Geologica] font-semibold mx-2">Joseph Santos</div>
