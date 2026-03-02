@@ -40,7 +40,7 @@ export default function Home() {
 
             {/* Youtube embed */}
             <iframe 
-            className="w-full h-[calc((100vw-2rem)*9/16)] bg-black lg:w-160 lg:h-90"
+            className="w-full h-[calc((100vw-2rem)*9/16)] bg-black lg:w-160 lg:h-90 hover:shadow-[0_0_20px_6px] lg:hover:shadow-[0_0_20px_4px] hover:shadow-[#00775bf0] transition-shadow duration-200 ease-in-out"
             src="https://www.youtube.com/embed/SywifiPJEWc"
             />
 
@@ -72,9 +72,14 @@ export default function Home() {
               <p className="text-lg text-[var(--content-inverse)]">- Tem medo de travar nas entrevistas</p>
               <p className="text-lg text-[var(--content-inverse)]">- Sabe que tem potencial, mas não sabe se vender</p>
             </div>
-            <h5 className="text-center text-[var(--brand-secondary)] lg:text-start">
+            <motion.h5 
+            className="text-center text-[var(--brand-secondary)] lg:text-start"
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            transition={{ type: "easeIn", delay: 0.75, duration: 0.5 }}
+            >
               Então essa é a virada de chave que você precisa.
-            </h5>
+            </motion.h5>
           </div>
           <Button label="Entenda como" variant="white"/>
         </motion.div>
@@ -127,11 +132,23 @@ export default function Home() {
                 </div>
                 <Button label="Brilhe nas entrevistas" variant="default"/>
               </div>
-              <img src="/images/opportunities.svg" className="h-76 mx-32"/>
+              <motion.img 
+              src="/images/opportunities.svg" 
+              className="h-76 mx-32"
+              initial={{ scale: 1 }}
+              whileTap={{ scale: 1.15 }}
+              transition={{ duration: 0.15 }}
+              />
             </div>
           ) : (
             <div className="w-full flex flex-col items-center justify-center gap-12">
-              <img src="/images/opportunities.svg" className="h-76 mx-32"/>
+              <motion.img 
+              src="/images/opportunities.svg" 
+              className="h-76 mx-32"
+              initial={{ scale: 1 }}
+              whileTap={{ scale: 1.1 }}
+              transition={{ duration: 0.15 }}
+              />
               <div className="w-full flex flex-col items-center justify-center gap-8">
                 <div className="flex flex-col gap-2">
                   {opportunities.map((text, index) => (
@@ -184,7 +201,7 @@ export default function Home() {
         transition={{ duration: 0.75, delay: 0.25 }}
         className="w-full flex flex-col items-center justify-center lg:flex-row gap-8 lg:px-16 lg:gap-32">
           <div className="w-full flex flex-col items-center justify-center gap-2 lg:mx-12">
-            <img src="/images/Joseph.jpg" className="w-80 h-80 rounded-full"/>
+            <img src="/images/Joseph.jpg" className="w-80 h-80 rounded-full hover:shadow-[0_0_20px_4px] lg:hover:shadow-[0_0_20px_2px] hover:shadow-[#00775bf0] transition-shadow duration-200 ease-in-out"/>
             <div className="flex flex-row items-center">
               <img src="/logos/full.svg" className="h-16"/>
               <div className="text-3xl font-[Geologica] font-semibold mx-2">Joseph Santos</div>
