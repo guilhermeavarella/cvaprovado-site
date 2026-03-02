@@ -61,7 +61,7 @@ export default function Home() {
         className="w-full flex flex-col items-center bg-[var(--background-accent)] rounded-2xl p-8 lg:p-16 gap-12 lg:justify-between lg:flex-row"
         initial={{ scale: 1 }}
         whileHover={{ scale: 1.05 }}
-        whileactive={{ scale: 1.05 }}
+        whileActive={{ scale: 1.05 }}
         transition={{ duration: 0.15 }}
         >
           <div className="flex flex-col gap-6 select-none">
