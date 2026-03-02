@@ -61,7 +61,7 @@ export default function Home() {
         className="w-full flex flex-col items-center bg-[var(--background-accent)] rounded-2xl p-8 lg:p-16 gap-12 lg:justify-between lg:flex-row"
         initial={{ scale: 1 }}
         whileHover={{ scale: 1.05 }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.15 }}
         >
           <div className="flex flex-col gap-6">
             <h2 className="text-[var(--content-inverse)]">
@@ -88,20 +88,14 @@ export default function Home() {
             <motion.h4
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
-            transition={{
-                duration: 0.05,
-                scale: { type: "easeIn", delay: 0.25 },
-            }}
+            transition={{ type: "easeIn", delay: 0.2, duration: 0.25 }}
             >
               GARANTO SEU POSICIONAMENTO NO MERCADO
             </motion.h4>
             <motion.h2
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
-            transition={{
-                duration: 0.15,
-                scale: { type: "easeIn", delay: 0.35 },
-            }}
+            transition={{ type: "easeIn", delay: 0.3, duration: 0.25 }}
             >
               Desbloqueie vagas de emprego nas maiores empresas
             </motion.h2>
@@ -109,10 +103,7 @@ export default function Home() {
             className="text-justify font-medium lg:text-start"
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
-            transition={{
-                duration: 0.25,
-                scale: { type: "easeIn", delay: 0.45 },
-            }}
+            transition={{ type: "easeIn", delay: 0.4, duration: 0.25 }}
             >
               Este é o sistema validado que vai te tirar do anonimato, transformando seu currículo e LinkedIn em ferramentas de atração de recrutadores e te preparando para conquistar a vaga que você sempre quis. É a metodologia de alto impacto que eu mesmo uso e aplico com sucesso em meus clientes.
             </motion.p>
@@ -127,7 +118,7 @@ export default function Home() {
                     key={index} 
                     className="flex gap-1.5 rounded-sm py-0.5 pl-0.5 pr-1 hover:cursor-default"
                     whileHover={{ backgroundColor: '#00C07166' }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.25 }}
                     >
                       <img src="/icons/check.svg" className="w-6 h-6" alt="check icon" />
                       <p className="font-medium mt-0.25">{text}</p>
@@ -213,10 +204,7 @@ export default function Home() {
             className="text-center text-2xl font-[Geologica] font-semibold text-[var(--brand-primary)]"
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
-            transition={{
-                duration: 0.15,
-                scale: { type: "easeIn", delay: 0.25 },
-            }}
+            transition={{ type: "easeIn", delay: 0.75, duration: 0.5 }}
             >
               Seja a próxima história de sucesso!
             </motion.div>
