@@ -7,7 +7,8 @@ import reports from '../assets/reports.json';
 
 export default function Home() {
   const isLargeScreen = window.innerWidth >= 928;
-
+  
+  {/* Atualizar se necessário */}
   const opportunities = [
     "+400 currículos otimizados e personalizados",
     "+280 aprovações em processos seletivos",
@@ -18,7 +19,8 @@ export default function Home() {
 
   return (
     <div className="w-screen bg-[var(--background-default)] flex flex-col items-center justify-start">
-      {/* Background Image and Hero*/}
+
+      {/* Background Image and Hero */}
       <div className="absolute top-0 w-screen h-[54rem] flex flex-col items-center overflow-hidden">
         <div className="w-full h-[54rem] bg-[var(--background-inverse)]"/>
         <img src={heroImage} className="w-dvw mt-[-1.25rem] mr-[-1rem] lg:mt-[-5%] lg:mr-0"/>
@@ -119,6 +121,8 @@ export default function Home() {
             <div className="w-full flex flex-row items-center justify-center gap-14">
               <div className="w-full flex flex-col items-center justify-center gap-8">
                 <div className="flex flex-col gap-1">
+
+                  {/* Opportunities (desktop) */}
                   {opportunities.map((text, index) => (
                     <motion.div 
                     key={index} 
@@ -130,6 +134,7 @@ export default function Home() {
                       <p className="font-medium mt-0.25">{text}</p>
                     </motion.div>
                   ))}
+
                 </div>
                 <Button label="Brilhe nas entrevistas" variant="default"/>
               </div>
@@ -152,12 +157,15 @@ export default function Home() {
               />
               <div className="w-full flex flex-col items-center justify-center gap-8">
                 <div className="flex flex-col gap-2">
+
+                  {/* Opportunities (mobile) */}
                   {opportunities.map((text, index) => (
                     <div key={index} className="flex gap-1.5">
                       <img src="/icons/check.svg" className="w-8 h-8"/>
                       <p className="font-medium mt-1">{text}</p>
                     </div>
                   ))}
+
                 </div>
                 <Button label="Brilhe nas entrevistas" variant="default"/>
               </div>
@@ -170,10 +178,13 @@ export default function Home() {
       <section className="w-full flex flex-col items-center justify-start px-4 py-12 lg:py-16 lg:max-w-300">
         <div className="text-3xl lg:text-4xl font-[Geologica] font-semibold mb-12">Conheça os serviços inclusos</div>
         <div className="w-full flex flex-col justify-center gap-4 lg:flex-row lg:gap-8">
+
+          {/* Service cards */}
           <ServiceCard title="Elaboração de Currículo Estratégico" description="Nada de templates prontos. Cada currículo é desenhado para os robôs (ATS), mas escrito para impressionar quem lê. Você se torna impossível de ignorar." icon="cv"/>
           <ServiceCard title="Mentoria de Carreira" description="Acompanhamento individual para acelerar sua evolução. Trabalhamos posicionamento, escolhas estratégicas, clareza de objetivos e caminhos reais. Você recebe direção prática, feedback e plano de ação." icon="carreer"/>
           <ServiceCard title="Preparação para Entrevistas" description="Treino direto para melhorar sua performance em seleções. Você aprende a criar respostas fortes, comunicar autoridade e mostrar valor. Ajustamos postu-ra, narrativa e pontos de impacto." icon="interview"/>
           <ServiceCard title="Estruturação de Perfil: Gupy e LinkedIn" description="Otimização dos perfis para aumentar visibilidade e passar por filtros. Ajusto palavras-chave, narrativa e seções para destacar habilidades e deixar seu perfil profissional e claro." icon="linkedin"/>
+        
         </div>
       </section>
       
@@ -191,7 +202,7 @@ export default function Home() {
             </div>
           ))
         ]} options={ { loop: true } } />
-        
+
       </section>
       
       {/* Final section */}
@@ -208,6 +219,7 @@ export default function Home() {
               <div className="text-3xl font-[Geologica] font-semibold mx-2">Joseph Santos</div>
             </div>
           </div>
+
           <div className="w-full flex flex-col items-center justify-center gap-6">
             <div className="text-center lg:text-start text-3xl font-[Geologica] font-semibold">Transformo sua busca em sucesso garantido</div>
             <div>
@@ -230,6 +242,7 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+      
     </div>
   )
 } 
