@@ -1,5 +1,9 @@
 import { motion } from "motion/react"
 
+{/* 
+    icon: "carreer" | "cv" | "interview" | "linkedin"
+*/}
+
 export default function ServiceCard({ title, description, icon }) {
     const isLargeScreen = window.innerWidth >= 928;
 
@@ -10,8 +14,8 @@ export default function ServiceCard({ title, description, icon }) {
         whileTap={{ scale: 1.05 }}
         >
             <img src={`/icons/services/${icon}.svg`} className="w-16 h-16 select-none"/>
-            <h5 className="text-center select-none">{title}</h5>
-            <p className="text-center select-none">{description}</p>
+            <h5 className="text-center select-none"> {title} </h5>
+            <p className="text-center select-none"> {description} </p>
         </motion.div>
     )
 }
