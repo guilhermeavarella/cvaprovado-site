@@ -7,10 +7,20 @@ import reports from '../assets/reports.json';
 
 export default function Home() {
   const isLargeScreen = window.innerWidth >= 928;
+  
+  {/* Atualizar se necessário */}
+  const opportunities = [
+    "+400 currículos otimizados e personalizados",
+    "+280 aprovações em processos seletivos",
+    "+30 aprovações no Itaú Unibanco e entre outras instituições financeiras",
+    "Currículos com até 80% mais chance de serem selecionados",
+    "Suporte completo em inscrição, busca de vagas e simulações de entrevista"
+  ];
 
   return (
     <div className="w-screen bg-[var(--background-default)] flex flex-col items-center justify-start">
-      {/* Background Image and Hero*/}
+
+      {/* Background Image and Hero */}
       <div className="absolute top-0 w-screen h-[54rem] flex flex-col items-center overflow-hidden">
         <div className="w-full h-[54rem] bg-[var(--background-inverse)]"/>
         <img src={heroImage} className="w-dvw mt-[-1.25rem] mr-[-1rem] lg:mt-[-5%] lg:mr-0"/>
@@ -32,7 +42,7 @@ export default function Home() {
 
             {/* Youtube embed */}
             <iframe 
-            className="w-full h-[calc((100vw-2rem)*9/16)] bg-black lg:w-160 lg:h-90"
+            className="w-full h-[calc((100vw-2rem)*9/16)] bg-black lg:w-160 lg:h-90 active:shadow-[0_0_20px_6px] lg:hover:shadow-[0_0_20px_4px] active:shadow-[#00775bf0] hover:shadow-[#00775bf0] transition-shadow duration-200 ease-in-out"
             src="https://www.youtube.com/embed/SywifiPJEWc"
             />
 
@@ -49,8 +59,14 @@ export default function Home() {
       <section className="w-full flex flex-col items-center justify-start px-4 py-12 mt-16 lg:py-16 lg:max-w-300 md:mt-0">
 
         {/* Identification card */}
-        <div className="w-full flex flex-col items-center bg-[var(--background-accent)] rounded-2xl p-8 lg:p-16 gap-12 lg:justify-between lg:flex-row">
-          <div className="flex flex-col gap-6">
+        <motion.div 
+        className="w-full flex flex-col items-center bg-[var(--background-accent)] rounded-2xl p-8 lg:p-16 gap-12 lg:justify-between lg:flex-row"
+        initial={{ scale: 1 }}
+        whileHover={{ scale: 1.05 }}
+        whileActive={{ scale: 1.05 }}
+        transition={{ duration: 0.15 }}
+        >
+          <div className="flex flex-col gap-6 select-none">
             <h2 className="text-[var(--content-inverse)]">
               Se você:
             </h2>
@@ -59,12 +75,17 @@ export default function Home() {
               <p className="text-lg text-[var(--content-inverse)]">- Tem medo de travar nas entrevistas</p>
               <p className="text-lg text-[var(--content-inverse)]">- Sabe que tem potencial, mas não sabe se vender</p>
             </div>
-            <h5 className="text-center text-[var(--brand-secondary)] lg:text-start">
+            <motion.h5 
+            className="text-center text-[var(--brand-secondary)] lg:text-start"
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            transition={{ type: "easeIn", delay: 0.75, duration: 0.5 }}
+            >
               Então essa é a virada de chave que você precisa.
-            </h5>
+            </motion.h5>
           </div>
           <Button label="Entenda como" variant="white"/>
-        </div>
+        </motion.div>
 
       </section>
 
@@ -72,71 +93,79 @@ export default function Home() {
       <section className="w-full flex flex-col items-center justify-start px-4 py-12 lg:py-16 lg:max-w-300">
         <div className="w-full flex flex-col justify-center gap-16 lg:gap-16">
           <div className="w-full flex flex-col gap-6 lg:max-w-200">
-            <h4>
+            <motion.h4
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            transition={{ type: "easeIn", delay: 0.2, duration: 0.25 }}
+            >
               GARANTO SEU POSICIONAMENTO NO MERCADO
-            </h4>
-            <h2>
+            </motion.h4>
+            <motion.h2
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            transition={{ type: "easeIn", delay: 0.3, duration: 0.25 }}
+            >
               Desbloqueie vagas de emprego nas maiores empresas
-            </h2>
-            <p className="text-justify font-medium lg:text-start">
+            </motion.h2>
+            <motion.p 
+            className="text-justify font-medium lg:text-start"
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            transition={{ type: "easeIn", delay: 0.4, duration: 0.25 }}
+            >
               Este é o sistema validado que vai te tirar do anonimato, transformando seu currículo e LinkedIn em ferramentas de atração de recrutadores e te preparando para conquistar a vaga que você sempre quis. É a metodologia de alto impacto que eu mesmo uso e aplico com sucesso em meus clientes.
-            </p>
+            </motion.p>
           </div>
 
           {isLargeScreen ? (
-            <div className="w-full flex flex-row items-center justify-center gap-16">
+            <div className="w-full flex flex-row items-center justify-center gap-14">
               <div className="w-full flex flex-col items-center justify-center gap-8">
-                <div className="flex flex-col gap-2">
-                  <div className="flex gap-1.5">
-                    <img src="/icons/check.svg" className="w-6 h-6"/>
-                    <p className="font-medium mt-0.25">+400 currículos otimizados e personalizados</p>
-                  </div>
-                  <div className="flex gap-1.5">
-                    <img src="/icons/check.svg" className="w-6 h-6"/>
-                    <p className="font-medium mt-0.25">+280 aprovações em processos seletivos</p>
-                  </div>
-                  <div className="flex gap-1.5">
-                    <img src="/icons/check.svg" className="w-6 h-6"/>
-                    <p className="font-medium mt-0.25">+30 aprovações no Itaú Unibanco e entre outras instituições financeiras</p>
-                  </div>
-                  <div className="flex gap-1.5">
-                    <img src="/icons/check.svg" className="w-6 h-6"/>
-                    <p className="font-medium mt-0.25">Currículos com até 80% mais chance de serem selecionados</p>
-                  </div>
-                  <div className="flex gap-1.5">
-                    <img src="/icons/check.svg" className="w-6 h-6"/>
-                    <p className="font-medium mt-0.25">Suporte completo em inscrição, busca de vagas e simulações de entrevista</p>
-                  </div>
+                <div className="flex flex-col gap-1">
+
+                  {/* Opportunities (desktop) */}
+                  {opportunities.map((text, index) => (
+                    <motion.div 
+                    key={index} 
+                    className="flex gap-1.5 rounded-sm py-0.5 pl-0.5 pr-1 hover:cursor-default"
+                    whileHover={{ backgroundColor: '#00C07166' }}
+                    transition={{ duration: 0.25 }}
+                    >
+                      <img src="/icons/check.svg" className="w-6 h-6" alt="check icon" />
+                      <p className="font-medium mt-0.25">{text}</p>
+                    </motion.div>
+                  ))}
+
                 </div>
                 <Button label="Brilhe nas entrevistas" variant="default"/>
               </div>
-              <img src="/images/opportunities.svg" className="h-76 mx-32"/>
+              <motion.img 
+              src="/images/opportunities.svg" 
+              className="h-76 mx-32"
+              initial={{ scale: 1 }}
+              whileTap={{ scale: 1.15 }}
+              transition={{ duration: 0.15 }}
+              />
             </div>
           ) : (
             <div className="w-full flex flex-col items-center justify-center gap-12">
-              <img src="/images/opportunities.svg" className="h-76 mx-32"/>
+              <motion.img 
+              src="/images/opportunities.svg" 
+              className="h-76 mx-32"
+              initial={{ scale: 1 }}
+              whileTap={{ scale: 1.1 }}
+              transition={{ duration: 0.15 }}
+              />
               <div className="w-full flex flex-col items-center justify-center gap-8">
                 <div className="flex flex-col gap-2">
-                  <div className="flex gap-1.5">
-                    <img src="/icons/check.svg" className="w-8 h-8"/>
-                    <p className="font-medium mt-1">+400 currículos otimizados e personalizados</p>
-                  </div>
-                  <div className="flex gap-1.5">
-                    <img src="/icons/check.svg" className="w-8 h-8"/>
-                    <p className="font-medium mt-1">+280 aprovações em processos seletivos</p>
-                  </div>
-                  <div className="flex gap-1.5">
-                    <img src="/icons/check.svg" className="w-8 h-8"/>
-                    <p className="font-medium mt-1">+30 aprovações no Itaú Unibanco e entre outras instituições financeiras</p>
-                  </div>
-                  <div className="flex gap-1.5">
-                    <img src="/icons/check.svg" className="w-8 h-8"/>
-                    <p className="font-medium mt-1">Currículos com até 80% mais chance de serem selecionados</p>
-                  </div>
-                  <div className="flex gap-1.5">
-                    <img src="/icons/check.svg" className="w-8 h-8"/>
-                    <p className="font-medium mt-1">Suporte completo em inscrição, busca de vagas e simulações de entrevista</p>
-                  </div>
+
+                  {/* Opportunities (mobile) */}
+                  {opportunities.map((text, index) => (
+                    <div key={index} className="flex gap-1.5">
+                      <img src="/icons/check.svg" className="w-8 h-8"/>
+                      <p className="font-medium mt-1">{text}</p>
+                    </div>
+                  ))}
+
                 </div>
                 <Button label="Brilhe nas entrevistas" variant="default"/>
               </div>
@@ -149,16 +178,19 @@ export default function Home() {
       <section className="w-full flex flex-col items-center justify-start px-4 py-12 lg:py-16 lg:max-w-300">
         <div className="text-3xl lg:text-4xl font-[Geologica] font-semibold mb-12">Conheça os serviços inclusos</div>
         <div className="w-full flex flex-col justify-center gap-4 lg:flex-row lg:gap-8">
+
+          {/* Service cards */}
           <ServiceCard title="Elaboração de Currículo Estratégico" description="Nada de templates prontos. Cada currículo é desenhado para os robôs (ATS), mas escrito para impressionar quem lê. Você se torna impossível de ignorar." icon="cv"/>
           <ServiceCard title="Mentoria de Carreira" description="Acompanhamento individual para acelerar sua evolução. Trabalhamos posicionamento, escolhas estratégicas, clareza de objetivos e caminhos reais. Você recebe direção prática, feedback e plano de ação." icon="carreer"/>
           <ServiceCard title="Preparação para Entrevistas" description="Treino direto para melhorar sua performance em seleções. Você aprende a criar respostas fortes, comunicar autoridade e mostrar valor. Ajustamos postu-ra, narrativa e pontos de impacto." icon="interview"/>
           <ServiceCard title="Estruturação de Perfil: Gupy e LinkedIn" description="Otimização dos perfis para aumentar visibilidade e passar por filtros. Ajusto palavras-chave, narrativa e seções para destacar habilidades e deixar seu perfil profissional e claro." icon="linkedin"/>
+        
         </div>
       </section>
       
       {/* Reports section */}
       <section className="w-full max-w-screen flex flex-col items-center justify-start py-12 lg:py-16">
-        <div className="text-3xl lg:text-4xl font-[Geologica] font-semibold mb-12">Histórias de sucesso</div>
+        <div className="text-3xl lg:text-4xl font-[Geologica] font-semibold mb-8">Histórias de sucesso</div>
 
         {/* Reports carousel */}
         <EmblaCarousel slides={[
@@ -170,7 +202,7 @@ export default function Home() {
             </div>
           ))
         ]} options={ { loop: true } } />
-        
+
       </section>
       
       {/* Final section */}
@@ -178,15 +210,16 @@ export default function Home() {
         <motion.div 
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.25 }}
+        transition={{ duration: 0.75, delay: 0.25 }}
         className="w-full flex flex-col items-center justify-center lg:flex-row gap-8 lg:px-16 lg:gap-32">
           <div className="w-full flex flex-col items-center justify-center gap-2 lg:mx-12">
-            <img src="/images/Joseph.jpg" className="w-80 h-80 rounded-full"/>
+            <img src="/images/Joseph.jpg" className="w-80 h-80 rounded-full active:shadow-[0_0_20px_4px] lg:hover:shadow-[0_0_20px_2px] active:shadow-[#00775bf0] hover:shadow-[#00775bf0] transition-shadow duration-200 ease-in-out"/>
             <div className="flex flex-row items-center">
               <img src="/logos/full.svg" className="h-16"/>
               <div className="text-3xl font-[Geologica] font-semibold mx-2">Joseph Santos</div>
             </div>
           </div>
+
           <div className="w-full flex flex-col items-center justify-center gap-6">
             <div className="text-center lg:text-start text-3xl font-[Geologica] font-semibold">Transformo sua busca em sucesso garantido</div>
             <div>
@@ -197,11 +230,19 @@ export default function Home() {
                 Durante esse tempo, eu entendi como funcionam os algoritmos que filtram currículos (ATS), como os recrutadores pensam e por que a maioria dos candidatos sequer é vista.
               </p>
             </div>
-            <div className="text-center text-2xl font-[Geologica] font-semibold text-[var(--brand-primary)]">Seja a próxima história de sucesso!</div>
+            <motion.div 
+            className="text-center text-2xl font-[Geologica] font-semibold text-[var(--brand-primary)]"
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            transition={{ type: "easeIn", delay: 0.75, duration: 0.5 }}
+            >
+              Seja a próxima história de sucesso!
+            </motion.div>
             <Button label="Quero garantir minha vaga" variant="default"/>
           </div>
         </motion.div>
       </section>
+      
     </div>
   )
 } 

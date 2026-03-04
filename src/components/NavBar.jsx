@@ -21,20 +21,19 @@ export default function NavBar() {
     const [logo, setLogo] = useState("icon");
     const isLargeScreen = window.innerWidth > 768;
 
+    // Auto navbar variant set/change on scroll
     useEffect(() => {
         const handleScroll = () => {
-        const isAtTop = window.scrollY < 10 * window.innerHeight / 100;
-        setVariant(isAtTop ? "transparent" : "solid");
+            const isAtTop = window.scrollY < 10 * window.innerHeight / 100;
+            setVariant(isAtTop ? "transparent" : "solid");
         };
 
-        if (isLargeScreen) { setLogo("text"); }
+        if (isLargeScreen) { setLogo("text"); } // Alternative logo for desktop
 
         window.addEventListener("scroll", handleScroll);
         handleScroll(); // initialize on mount
 
-        return () => {
-        window.removeEventListener("scroll", handleScroll);
-        };
+        return () => { window.removeEventListener("scroll", handleScroll); };
     }, []);
 
     return (
@@ -45,7 +44,7 @@ export default function NavBar() {
             ${NAVBAR_VARIANTS[variant]}
         `}
         >
-        <img src={LOGO_VARIANTS[logo].logo} alt="Currículo Aprovado" className={LOGO_VARIANTS[logo].size + " hover:cursor-pointer"} onClick={() => window.location.href = "/"} />
+            <img src={LOGO_VARIANTS[logo].logo} alt="Currículo Aprovado" className={LOGO_VARIANTS[logo].size + " hover:cursor-pointer"} onClick={() => window.location.href = "/"} />
         </section>
     );
 }
